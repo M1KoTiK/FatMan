@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://ncuc05xdrjhq"]
 
-[ext_resource type="Script" path="res://Scenes/CharacterBody2D.cs" id="1_aqugd"]
+[ext_resource type="Script" path="res://Scripts/PlayerBody.cs" id="1_03gpy"]
 [ext_resource type="Script" path="res://Scenes/FollowingCamera.cs" id="1_hxq7s"]
 [ext_resource type="Texture2D" uid="uid://cv8o3han85uj0" path="res://Sprites/chelig_animation.png" id="2_m8g6u"]
 [ext_resource type="TileSet" uid="uid://dtlolce36kncq" path="res://Sprites/new_tile_set.tres" id="3_l1pkf"]
@@ -121,8 +121,14 @@ grow_vertical = 2
 color = Color(0.65098, 0.929412, 1, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(117, 445)
-script = ExtResource("1_aqugd")
+position = Vector2(117, 443)
+script = ExtResource("1_03gpy")
+gravity = 1100.0
+terminalVelocity = 900.0
+groundAcceleration = 1000.0
+airAcceleration = 500.0
+initialJumpVelocity = -350.0
+jumpGravity = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1, 13)
