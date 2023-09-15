@@ -123,12 +123,16 @@ color = Color(0.65098, 0.929412, 1, 1)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(117, 443)
 script = ExtResource("1_03gpy")
-gravity = 1100.0
-terminalVelocity = 900.0
-groundAcceleration = 1000.0
-airAcceleration = 500.0
-initialJumpVelocity = -350.0
-jumpGravity = 400.0
+gravity = 2800.0
+terminalVelocity = 1000.0
+groundAcceleration = 2000.0
+airAcceleration = 1500.0
+initialJumpVelocity = -600.0
+jumpGravity = 1200.0
+jumpTime = 0.3
+jumpReleaseMultiplier = 0.5
+coyoteTime = 0.4
+jumpBufferTime = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1, 13)
@@ -137,6 +141,7 @@ shape = SubResource("CapsuleShape2D_ig7va")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_g4w7e")
 animation = &"crouch"
+frame_progress = 0.259477
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-42, 43)
